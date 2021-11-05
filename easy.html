@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/header_footer.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/quiz_elements.css">
     <title>Easy quiz</title>
 </head>
 <body>
@@ -17,7 +18,6 @@
                 <a href="index.html" class="link nav__item">Home</a>
                 <a href="easy.html" class="link nav__item">Easy Quiz</a>
                 <a href="hard.html" class="link nav__item">Hard Quiz</a>
-                <a href="#" class="link nav__item">About</a>
             </nav>
         </header>
 
@@ -30,22 +30,21 @@
         
         <div class="content">
             <div class="text">
-                <p class="paragraph content__paragraph">
-                    In this quiz you have to asnwer five basic questions about ultrarunning. Each multiple choice question has only one correct asnwer. 
+                <p class="paragraph quiz__paragraph">
+                    In this quiz you have to asnwer five basic questions about ultrarunning. Each multiple choice question has only one correct asnwer. Good luck!  
                 </p>
             </div>  
-            <div class="multipple_choice">
-                <h3 class="heading3 multiple_choice__heading">
-                    An ultramarathon can broadly be defined as: 
-                </h3>
-                <ul>
-                    <li>any race longer than a marathon (42km)</li>
-                    <li>any race that lasts longer than 12 hours</li>
-                    <li>any race taking place in a hilly terrain</li>
-                </ul>
-            </div>
-        </div>
+            <div class="quiz_wrapper">
+                <div class="quiz_item_container js-quiz-item">
+                   
+                </div>
 
+                    <div class="quiz__btn-wrapper"><button type="submit" class="button js-submit-btn">Submit answers</button></div>
+
+                    <div class="quiz__results js-results"></div>   
+            </div>  
+        </div>
+    
         
 
         <footer class="footer">
@@ -57,5 +56,7 @@
             </p>   
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -16,11 +16,6 @@ body {
     line-height: 140%;
 }
 
-
-.link {
-    text-decoration: none;
-}
-
 .button {
     padding: 8px 10px;
     font-size: 16px;
@@ -34,3 +29,4 @@ body {
     background-color: rgba(226, 43, 217, 0.8);
     cursor: pointer;
 }
+
