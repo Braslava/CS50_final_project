@@ -13,20 +13,28 @@ body {
     font: inherit; 
     font-family: 'Roboto', sans-serif;
     margin: 0; 
-    line-height: 140%;
+    font-size: 18px;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+      font-size: 16px;
+      line-height: 120%;
+    }
+  }
+
+
 .button {
-    padding: 8px 10px;
+    padding: 10px 20px;
     font-size: 16px;
     border: none;
     border-radius: 4px;
     color: var(--white);
-    background-color: rgb(226, 43, 217);
+    background-color: rgb(121, 25, 116);
 }
 
 .button:hover, button:focus {
-    background-color: rgba(226, 43, 217, 0.8);
+    background-color: rgba(121, 25, 116, 0.8);
     cursor: pointer;
 }
 

@@ -1,8 +1,11 @@
 
 .quiz_wrapper {
     display: grid;
-    margin: 5px 40px; 
+    margin: 5px 10px; 
+    max-width: 800px;
+    justify-self: center;
 }
+
 .quiz_item_container {
     display: grid;
     gap: 20px;
@@ -23,7 +26,7 @@
 
 .quiz__btn-wrapper {
     justify-self: center;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .quiz__answers {
@@ -46,8 +49,18 @@
 }
 
 .quiz__results {
-    padding: 20px 0;
+    padding: 15px 0 10px 0;
     text-align: center;
     font-size: 18px;
     color: var(--grey);
 }
+
+@media only screen and (max-width: 600px) {
+    .quiz__paragraph {
+      font-size: 16px;
+      line-height: 120%;
+    }
+    .quiz__results{
+        font-size: 16px;
+    }
+  }

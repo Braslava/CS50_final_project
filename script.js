@@ -40,13 +40,9 @@ const easyQuestions = [{
     },
 ]
 
-const quizContainer = document.querySelector('.js-quiz-item');
-const resultsContainer = document.querySelector('.js-results');
-const submitButton = document.querySelector('.js-submit-btn');
 
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
-
 
     function showQuestions(questions, quizContainer) {
 
@@ -71,7 +67,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         });
 
         quizContainer.innerHTML = output.join('');
-        //console.log(output)
     }
 
     function showResults(questions, quizContainer, resultsContainer) {
@@ -80,18 +75,20 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         let numCorrect = 0;
 
         questions.forEach((question, i) => {
+            
             userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked') || {}).value;
             if (userAnswer === questions[i].correctAnswer) {
                 numCorrect++;
                 answerContainers[i].classList.add('correct');
+                answerContainers[i].classList.remove('wrong');
             } else {
                 answerContainers[i].classList.add('wrong');
             }
         })
-        resultsContainer.innerHTML = numCorrect + ' correct answers out of ' + questions.length;
+        resultsContainer.innerHTML = numCorrect + ' correct answers out of ' + questions.length + '. Reload the page to try again.';
     }
 
-    showQuestions(easyQuestions, quizContainer);
+    showQuestions(questions, quizContainer);
 
     submitButton.addEventListener("click", () => {
         showResults(questions, quizContainer, resultsContainer);
@@ -99,5 +96,11 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
 }
 
+export { generateQuiz };
+
+
+const quizContainer = document.querySelector('.js-quiz-item');
+const resultsContainer = document.querySelector('.js-results');
+const submitButton = document.querySelector('.js-submit-btn');
 
 generateQuiz(easyQuestions, quizContainer, resultsContainer, submitButton);
