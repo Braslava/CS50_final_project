@@ -1,47 +1,3 @@
-const easyQuestions = [{
-        question: "Which statement best describes an ultramarathon?",
-        answers: {
-            a: "Any distance longer than 42 kilometres",
-            b: "Any running event in mountainus terrain",
-            c: "A running event o at least 100 kilometres",
-            d: "Something only crazy people like to do"
-        },
-        correctAnswer: 'a'
-    },
-    {
-        question: "Which of these is the most popular trail ultrarunning event in Europe?",
-        answers: {
-            a: "Western States Endurance Run",
-            b: "Transgrancanaria",
-            c: "Ultra Trail du Mont Blanc (UTMB)",
-            d: "Ecotrail Paris"
-        },
-        correctAnswer: 'c'
-    },
-    {
-        question: "Spartathlon is considered one one of the most difficlut running race in the world. How long is the distance of Spartathlon?",
-        answers: {
-            a: "150 kilometres",
-            b: "500 kilometres",
-            c: "246 kilometres",
-            d: "206 kilometres"
-        },
-        correctAnswer: 'c'
-    },
-    {
-        question: "Which statement best describes an ultramarathon?",
-        answers: {
-            a: "Any distance longer than 42km",
-            b: "Any running event in mountainus terrain",
-            c: "A running event o at least 100km",
-            d: "Something only crazy people like to do"
-        },
-        correctAnswer: 'a'
-    },
-]
-
-
-
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
 
     function showQuestions(questions, quizContainer) {
@@ -74,9 +30,17 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         let userAnswer = '';
         let numCorrect = 0;
 
+
         questions.forEach((question, i) => {
+
+           // if ( !(answerContainers[i].querySelector('input[name=question' + i + ']:checked'))) {
+                // let alert = document.createElement('span');
+                // answerContainers[i].appendChild(alert); 
+                // alert.innerHTML = "You did not select an answer!"
+           // }  
             
             userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked') || {}).value;
+
             if (userAnswer === questions[i].correctAnswer) {
                 numCorrect++;
                 answerContainers[i].classList.add('correct');
@@ -93,14 +57,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
     submitButton.addEventListener("click", () => {
         showResults(questions, quizContainer, resultsContainer);
     })
-
 }
 
 export { generateQuiz };
-
-
-const quizContainer = document.querySelector('.js-quiz-item');
-const resultsContainer = document.querySelector('.js-results');
-const submitButton = document.querySelector('.js-submit-btn');
-
-generateQuiz(easyQuestions, quizContainer, resultsContainer, submitButton);

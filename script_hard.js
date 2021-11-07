@@ -45,7 +45,7 @@ const hardQuestions = [{
     },
 ]
 
-import { generateQuiz } from "./script.js";
+import { generateQuiz } from "./modules/main.js";
 
 const quizContainer = document.querySelector('.js-quiz-item');
 const resultsContainer = document.querySelector('.js-results');
