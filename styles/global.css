@@ -19,18 +19,21 @@ body {
 @media only screen and (max-width: 600px) {
     body {
       font-size: 16px;
-      line-height: 120%;
+      line-height: 130%;
     }
   }
 
 
 .button {
-    padding: 10px 20px;
+    padding: 12px;
+    width: 100%;
+    max-width: 200px;
     font-size: 16px;
     border: none;
     border-radius: 4px;
     color: var(--white);
     background-color: rgb(121, 25, 116);
+    font-weight: 400;
 }
 
 .button:hover, button:focus {

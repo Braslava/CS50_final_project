@@ -45,5 +45,6 @@ import { generateQuiz } from "./modules/main.js";
 const quizContainer = document.querySelector('.js-quiz-item');
 const resultsContainer = document.querySelector('.js-results');
 const submitButton = document.querySelector('.js-submit-btn');
+const reloadButton = document.querySelector('.js-reload-btn'); 
 
-generateQuiz(easyQuestions, quizContainer, resultsContainer, submitButton);
+generateQuiz(easyQuestions, quizContainer, resultsContainer, submitButton, reloadButton);
