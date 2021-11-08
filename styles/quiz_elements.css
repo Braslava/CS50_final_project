@@ -45,6 +45,7 @@
     grid-template-columns: 1fr; 
     gap: 7px; 
     align-content: center;
+    color: var(--grey);
 }
 
 .answer {
@@ -55,7 +56,6 @@
 .answer_label {
     cursor: pointer;
     border-radius: 4px;
-    color: var(--grey);
 }
 
 .answer_label:hover  {
